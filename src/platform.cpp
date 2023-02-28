@@ -65,6 +65,7 @@ QStringList Platform::getPlatforms()
   platforms.append("channelf");
   platforms.append("coco");
   platforms.append("coleco");
+  platforms.append("crvision");
   platforms.append("daphne");
   platforms.append("dragon32");
   platforms.append("dreamcast");
@@ -190,6 +191,8 @@ QStringList Platform::getScrapers(QString platform)
   } else if(platform == "coco") {
     scrapers.append("screenscraper");
   } else if(platform == "coleco") {
+    scrapers.append("screenscraper");
+  } else if(platform == "crvision") {
     scrapers.append("screenscraper");
   } else if(platform == "daphne") {
     scrapers.append("screenscraper");
@@ -407,6 +410,8 @@ QString Platform::getFormats(QString platform, QString extensions, QString addEx
     formats.append("*.cas *.wav *.bas *.asc *.dmk *.jvc *.os9 *.dsk *.vdk *.rom *.ccc *.sna");
   } else if(platform == "coleco") {
     formats.append("*.bin *.col *.rom");
+  } else if(platform == "crvision") {
+    formats.append("*.bin *.rom");
   } else if(platform == "daphne") {
     formats.append("*.daphne");
   } else if(platform == "dragon32") {
@@ -596,6 +601,8 @@ QString Platform::getDefaultScraper(QString platform)
   } else if(platform == "coco") {
     scraper = "cache";
   } else if(platform == "coleco") {
+    scraper = "cache";
+  } else if(platform == "crvision") {
     scraper = "cache";
   } else if(platform == "daphne") {
     scraper = "cache";
